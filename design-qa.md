@@ -69,3 +69,7 @@ Final result remains **blocked** solely for original-asset delivery and final ph
 - JavaScript/network errors: none. Production build passed.
 
 New archive work is ready. Global photographic QA stays **blocked only for the four earlier original files**, not the portraits, references or selfie now supplied.
+
+## Centered ending refinement
+
+User requested centered final work and hero exploration link, with no prominent footer caption. Centered the last odd gallery item while preserving normal column width; single-column mobile stays full width. Removed footer caption/rule and centered a 44px back-to-top target. Browser geometry and navigation checks passed on the production build at 1440px, 768px and 390px: centered work/CTA, matching card width, no overflow, no footer text, working back-to-top. Visually inspected `.impeccable/review/centered-bottom-1440.png` and `centered-hero.png`; mobile capture is `centered-bottom-390.png`. No change to the outstanding first-four-originals limitation.

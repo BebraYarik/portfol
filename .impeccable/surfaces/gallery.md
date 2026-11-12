@@ -1,2 +1,4 @@
 # Gallery
 Mode: Experience. Preserve the approved cream surface, italic Cyrillic hero and purple/cyan wave mesh. Latest user refinement replaces the staggered gallery with two equal columns and aligned centered image/caption areas. Retain work numbers, topic categories and short descriptions; remove artistic titles and visible pause control. Mobile becomes one sequential column. Keep image proportions, keyboard-accessible photo viewing, previous/next, series selection and before/after retouch labels. Respect OS reduced-motion. New work metadata is prepared, but absent photo files must not become invented photographs or empty cards.
+
+Final alignment refinement: center any unpaired last work across both desktop columns, preserving the normal card width. Center the hero's «Исследовать коллекцию» link. Footer contains only a compact centered back-to-top arrow; omit the discipline/collection caption and decorative rule.
