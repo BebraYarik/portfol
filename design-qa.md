@@ -35,10 +35,24 @@ The implementation works and the finish review's one material implementation fin
 - Photo open, next/previous arrows, Escape close, native focus containment/return: passed.
 - About open and link to gallery: passed.
 - Mobile 390px and short 320 × 568 viewer: no horizontal overflow; close control remains visible.
-- Reduced-motion preference pauses shader on load; user can toggle motion.
+- Reduced-motion preference pauses shader on load. Visible pause control was subsequently removed by explicit user request.
 - Browser page errors: none.
 - Detector reported flat hierarchy against HTML alone. External CSS and rendered screenshots demonstrate display/body hierarchy; finding classified as false positive, not suppressed in code.
 
 ## Remaining action
 
-Supply four original photo files (an archive is suitable), replace temporary crops, and verify full-size photo rendering. Remaining required coursework images will be added when supplied. Vercel build instructions are in README.md; no deployment has been performed.
+Supply original photo files as downloadable attachments/an archive, replace temporary crops, and verify full-size photo rendering. New originals for the added portrait, reference and selfie works are also outstanding as local files, although visible in conversation. Filenames and confirmed lighting assignments are recorded in `src/photos/README.md`. Vercel build instructions are in README.md; no deployment has been performed.
+
+## Latest user refinement
+
+The user explicitly superseded the staggered gallery composition: remove pause control and artistic titles, center/align photographs and text, retain numbers and topic labels. Added metadata for AI retouch, backlight softbox series, two-softbox waist portrait, window portrait, reference repetition and selfie. User confirmed the first two studio portraits belong to backlight; the third belongs to two softboxes. Backlight close-up will arrive later.
+
+- New visual evidence: `.impeccable/review/revision-desktop.png` and `revision-mobile.png`, 1440px/390px widths, DPR 1, OS reduced-motion, fonts loaded. Compared with requested refinements; hero identity retained, gallery intentional changes accepted.
+- Browser geometry checks confirmed equal photo-stage, label and description tops within both desktop rows. No horizontal overflow on mobile.
+- No pause button or artistic work-title elements remain. Viewer headings use category labels.
+- Standard navigation, Escape dismissal and category labels passed.
+- Retouch before/after and series navigation passed with browser-only synthetic fixtures. Fixtures use existing mockup crops for interaction testing only, never saved as user portrait files. This verifies behavior, **not** the missing original photographs.
+- New works with missing assets remain hidden. No broken image requests or invented portraits are introduced. Existing four previews remain explicitly provisional.
+- JavaScript errors: none. Build passed.
+
+Final result remains **blocked** solely for original-asset delivery and final photographic verification. Layout changes can be reviewed and pushed independently.

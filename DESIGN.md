@@ -24,11 +24,10 @@ typography:
     lineHeight: 1.1
     letterSpacing: "-.03em"
   title:
-    fontFamily: "Oswald, sans-serif"
-    fontSize: "clamp(38px,4.4vw,65px)"
-    fontWeight: 400
-    lineHeight: 1.2
-    letterSpacing: "-.035em"
+    fontFamily: "Manrope, sans-serif"
+    fontSize: "clamp(17px,1.65vw,23px)"
+    fontWeight: 500
+    lineHeight: 1.4
   body:
     fontFamily: "Manrope, sans-serif"
     fontSize: "18px"
@@ -46,11 +45,6 @@ components:
     padding: "0"
   text-button-hover:
     textColor: "{colors.focus-purple}"
-  motion-toggle:
-    backgroundColor: "{colors.cream}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.pill}"
-    padding: "10px 14px"
   icon-button:
     backgroundColor: "{colors.cream}"
     textColor: "{colors.ink}"
@@ -72,7 +66,7 @@ components:
 
 **Creative North Star: "Редакционная фотогалерея"**
 
-The approved first mockup establishes a warm editorial setting for a Russian-language coursework exhibition. Large italic condensed type, open cream space, asymmetric photography and a purple/cyan ribbon create the visual character. Interface controls remain compact and captions stay close to the work.
+The approved first mockup establishes a warm editorial setting for a Russian-language coursework exhibition. Large italic condensed type, open cream space, aligned photography and a purple/cyan ribbon create the visual character. Interface controls remain compact and captions stay close to the work.
 
 This document records the implemented system in `src/style.css`; the gallery composition is described in `.impeccable/surfaces/gallery.md`. Current image crops are provisional extracts from the approved mockup, not source photographs. Original files remain outstanding.
 
@@ -80,8 +74,8 @@ This document records the implemented system in `src/style.css`; the gallery com
 
 - Cream canvas and deep ink typography.
 - Italic Oswald display paired with Manrope reading text.
-- Flat, rectangular photography with staggered desktop placement.
-- Expressive motion with a pause control and reduced-motion support.
+- Centered photographs in equal-height frames, aligned number/category captions.
+- Expressive motion with OS reduced-motion support; no visible pause button.
 
 ## Colors
 
@@ -114,9 +108,9 @@ At tablet widths, work titles become (34px); at mobile widths they become (38px)
 
 ## Layout
 
-The gallery has a centered maximum width of (1440px), horizontal padding of (4%) and two desktop columns in a (1.32fr / 1fr) ratio with a (70px) row gap. Articles remain in semantic order (01–04); explicit grid placement and negative top margins create the stagger. The upper-right work is lifted by (70px), the lower-right by (95px); selected images intentionally vary in width. Header and hero text use their own optical alignment rather than a rigid shared grid.
+The gallery has a centered maximum width of (1320px), (5%) horizontal padding, two equal columns, a (48px) column gap and (72px) row gap. Every image area has the same height, `clamp(320px,42vw,580px)`, with (16px) padding. The full photograph is centered without changing its proportions. Number/category captions and short descriptions are centered; artistic work names have been removed by explicit user request. Articles remain in semantic sequence. No work-specific negative margins or shifted columns remain.
 
-At (900px) and below, the gallery uses (5%) side padding, smaller type and a reduced stagger. At (580px) and below, it becomes one sequential column with (6%) side padding and a (45px) gap; desktop image offsets are removed. Above (1600px), header and hero controls receive centered wide-screen positioning.
+At (900px) and below, column/row gaps reduce to (28px)/(48px). At (580px) and below, the gallery becomes one column, with (6%) side padding, a (46px) row gap and (420px) image stages. Number/category labels use (18px); descriptions use (13px). Above (1600px), header and hero retain centered wide-screen positioning.
 
 The viewer changes from image/copy columns to one column at the tablet breakpoint. Dialogs fit within the viewport; mobile dialogs retain a (12px) outer margin per side.
 
@@ -126,13 +120,13 @@ The system uses no box shadows. Depth comes from image overlap, the wave behind 
 
 ## Shapes
 
-Photographs and dialogs have square corners. Thin ink rules and borders keep the editorial structure light. Only compact controls are rounded: the motion control uses the pill token and icon controls use the circle token.
+Photographs and dialogs have square corners. Thin ink rules and borders keep the editorial structure light. Only icon controls are rounded; they use the circle token.
 
 ## Components
 
 ### Buttons
 
-Text buttons are unfilled with zero padding and purple hover text. Icon buttons have cream surfaces, thin translucent ink borders and peach hover states. Motion controls combine a small icon and label inside a bordered pill; their mobile padding reduces to (9px 11px).
+Text buttons are unfilled with zero padding and purple hover text. Icon buttons have cream surfaces, thin translucent ink borders and peach hover states. The visible pause control has been removed by user request.
 
 All buttons and links expose a purple keyboard outline (3px), offset by (7px). Keep visible labels or accessible names on icon controls.
 
@@ -142,19 +136,19 @@ Navigation uses plain Manrope text and generous desktop spacing. The works link 
 
 ### Photo Cards
 
-The photograph, metadata, italic title, arrow and description form one unfilled, left-aligned button. Images are cropped inside rectangular containers. Hover moves the image upward (5px), increases saturation and shifts the arrow right (7px). No extra card shell or shadow is present.
+Equal-height image stages and centered category captions form the photo buttons. Retain work numbers, categories and short descriptions; do not restore artistic titles. Multiple images in a work show a frame count. Full original photographs keep their proportions and are centered inside the stage. Hover lifts the image (5px) and shifts the arrow (5px).
 
 ### Viewer and Motion
 
-The native modal dialog presents a cream image/copy layout, circular close and previous/next controls, and a tabular image count. Preserve keyboard operation, dismissal and focus return. The hero ribbon reacts to pointer movement. Its animation pauses while a dialog is open, when the pause control is active, and under the user's reduced-motion preference; reduced motion also disables CSS transitions and animations.
+The native modal dialog presents a cream image/copy layout, circular close and previous/next controls, and a tabular image count. Preserve keyboard operation, dismissal and focus return. Series have explicit frame selectors; AI retouch uses “До ретуши” / “После ретуши”. Left/right keys traverse frames then adjacent works. The hero ribbon reacts to pointer movement. Its animation pauses while a dialog is open, under the user's reduced-motion preference; reduced motion also disables CSS transitions and animations.
 
 ## Do's and Don'ts
 
 ### Do:
 
 - **Do** keep italic condensed headings paired with readable Manrope captions.
-- **Do** preserve the staggered desktop gallery and sequential mobile order.
-- **Do** preserve visible keyboard focus, native dialog behavior and motion controls.
+- **Do** preserve the aligned equal-column desktop gallery and sequential mobile order.
+- **Do** preserve visible keyboard focus, native dialog behavior and OS motion preferences.
 - **Do** identify current mockup crops as provisional until original photographs arrive.
 
 ### Don't:

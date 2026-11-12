@@ -149,7 +149,7 @@
       {
         "name": "arrow-hover",
         "value": "transform .3s",
-        "purpose": "Move the gallery arrow 7px right or exploration arrow 5px down."
+        "purpose": "Move the gallery arrow 5px right or exploration arrow 5px down."
       },
       {
         "name": "icon-hover",
@@ -159,12 +159,12 @@
       {
         "name": "dialog-enter",
         "value": ".4s cubic-bezier(.16,1,.3,1)",
-        "purpose": "Fade and translate a modal from 24px below; disabled under reduced motion or pause."
+        "purpose": "Fade and translate a modal from 24px below; disabled under reduced motion."
       },
       {
         "name": "motion-preference",
         "value": "prefers-reduced-motion: reduce",
-        "purpose": "Disable CSS transitions/animations and initialize the ribbon as paused. The manual pause control applies the same CSS behavior."
+        "purpose": "Disable CSS transitions/animations and initialize the ribbon as paused."
       }
     ],
     "breakpoints": [
@@ -200,14 +200,6 @@
       "css": ".ds-text{font:18px Manrope,sans-serif;color:var(--ink);padding:0;background:none;border:0;cursor:pointer}.ds-text:hover{color:#75408c}.ds-text:focus-visible{outline:3px solid #75408c;outline-offset:7px}"
     },
     {
-      "name": "Motion Toggle",
-      "kind": "button",
-      "refersTo": "motion-toggle",
-      "description": "Labeled pill used to pause the hero animation; state is managed by the application.",
-      "html": "<button class=\"ds-motion\" type=\"button\" aria-pressed=\"false\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M8 5v14M16 5v14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></svg><span>Пауза</span></button>",
-      "css": ".ds-motion{display:flex;align-items:center;gap:8px;background:var(--cream);color:var(--ink);padding:10px 14px;font:12px Manrope,sans-serif;border:1px solid #190d2433;border-radius:30px;cursor:pointer}.ds-motion:focus-visible{outline:3px solid #75408c;outline-offset:7px}@media(max-width:580px){.ds-motion{font-size:10px;padding:9px 11px}}"
-    },
-    {
       "name": "Icon Button",
       "kind": "button",
       "refersTo": "icon-button",
@@ -226,25 +218,25 @@
       "name": "Photo Card",
       "kind": "card",
       "refersTo": "work-card",
-      "description": "An unfilled photograph/caption button. The neutral image field is a preview placeholder, not an original photograph.",
-      "html": "<button class=\"ds-work\" type=\"button\"><span class=\"ds-work-photo\" role=\"img\" aria-label=\"Место для фотографии\"></span><span class=\"ds-work-meta\">01 / Фотография</span><span class=\"ds-work-heading\"><span class=\"ds-work-title\">Цифровая фотография</span><svg class=\"ds-work-arrow\" width=\"34\" height=\"34\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.3\"/></svg></span><span class=\"ds-work-description\">Подпись к фотографии</span></button>",
-      "css": ".ds-work{display:block;width:100%;padding:0;background:none;border:0;text-align:left;color:var(--ink);font-family:Manrope,sans-serif;cursor:pointer}.ds-work-photo{position:relative;display:block;width:100%;aspect-ratio:4/3;overflow:hidden;background:#e6d6be;border:1px solid #190d2408;transition:filter .5s,transform .6s cubic-bezier(.16,1,.3,1)}.ds-work-meta{display:block;margin:19px 4px 5px;font-size:19px;font-weight:600}.ds-work-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;margin:0 5px}.ds-work-title{font-family:Oswald,sans-serif;font-style:italic;font-size:clamp(38px,4.4vw,65px);font-weight:400;line-height:1.2;letter-spacing:-.035em}.ds-work-arrow{flex-shrink:0;transition:transform .3s}.ds-work-description{display:block;max-width:64ch;margin:10px 5px 0;font-size:18px;line-height:1.65}.ds-work:hover .ds-work-photo{filter:saturate(1.12);transform:translateY(-5px)}.ds-work:hover .ds-work-arrow{transform:translateX(7px)}.ds-work:focus-visible{outline:3px solid #75408c;outline-offset:7px}@media(max-width:900px){.ds-work-title{font-size:34px;font-weight:500}.ds-work-meta{font-size:11px}.ds-work-description{font-size:12px;line-height:1.7}}@media(max-width:580px){.ds-work-title{font-size:38px}.ds-work-meta{font-size:12px;margin-top:16px}.ds-work-description{font-size:13px}}@media(prefers-reduced-motion:reduce){.ds-work-photo,.ds-work-arrow,.ds-icon{transition:none}}"
+      "description": "Centered image stage with aligned number/category caption; no artistic title.",
+      "html": "<button class=\"ds-work\" type=\"button\"><span class=\"ds-work-photo\" role=\"img\" aria-label=\"Место для фотографии\"></span><span class=\"ds-work-label\">01 / Предметная фотография</span></button>",
+      "css": ".ds-work{display:block;width:100%;padding:0;background:transparent;border:0;text-align:center;color:var(--ink);font-family:Manrope,sans-serif;cursor:pointer}.ds-work-photo{display:block;height:320px;background:#eee0c8}.ds-work-label{display:block;margin-top:24px;font-size:23px;line-height:1.4}.ds-work:focus-visible{outline:3px solid #75408c;outline-offset:7px}"
     }
   ],
   "narrative": {
     "northStar": "Редакционная фотогалерея",
-    "overview": "The approved first mockup establishes a warm editorial setting for a Russian-language coursework exhibition. Large italic condensed type, open cream space, asymmetric photography and a purple/cyan ribbon create the visual character. Interface controls remain compact and captions stay close to the work.\n\nThis document records the implemented system in `src/style.css`; the gallery composition is described in `.impeccable/surfaces/gallery.md`. Current image crops are provisional extracts from the approved mockup, not source photographs. Original files remain outstanding.",
+    "overview": "The approved first mockup establishes a warm editorial setting for a Russian-language coursework exhibition. Large italic condensed type, open cream space, aligned photography and a purple/cyan ribbon create the visual character. Interface controls remain compact and captions stay close to the work.\n\nThis document records the implemented system in `src/style.css`; the gallery composition is described in `.impeccable/surfaces/gallery.md`. Current image crops are provisional extracts from the approved mockup, not source photographs. Original files remain outstanding.",
     "keyCharacteristics": [
       "Cream canvas and deep ink typography.",
       "Italic Oswald display paired with Manrope reading text.",
-      "Flat, rectangular photography with staggered desktop placement.",
-      "Expressive motion with a pause control and reduced-motion support."
+      "Centered photography with aligned number/category captions.",
+      "Expressive motion with OS reduced-motion support."
     ],
     "rules": [],
     "dos": [
       "**Do** keep italic condensed headings paired with readable Manrope captions.",
-      "**Do** preserve the staggered desktop gallery and sequential mobile order.",
-      "**Do** preserve visible keyboard focus, native dialog behavior and motion controls.",
+      "**Do** preserve the aligned desktop gallery and sequential mobile order.",
+      "**Do** preserve visible keyboard focus, native dialog behavior and OS motion preferences.",
       "**Do** identify current mockup crops as provisional until original photographs arrive."
     ],
     "donts": [
