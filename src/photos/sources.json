@@ -1,0 +1,56 @@
+{
+  "source": "фото.zip, supplied by the user",
+  "modifications": "Filenames only; original image bytes preserved.",
+  "files": [
+    {
+      "file": "retouch-before.png",
+      "originalFilename": "РЕТУШЬ (2).png",
+      "sha256": "4905dc332ddbc422309fedbb04bb01acd9dc7c0fd51e9d88c862267d3c7827a9"
+    },
+    {
+      "file": "retouch-after.png",
+      "originalFilename": "РЕТУШЬ.png",
+      "sha256": "853b22003df404bfdec2e580c3b77c86161c68917573aabe55e58adec35bce06"
+    },
+    {
+      "file": "backlight-1.png",
+      "originalFilename": "контровой (2).png",
+      "sha256": "0505dd41c9b245a5f8cbd7e878246f42fcb9f49d4ac0b78a15c2e9d055d9c9ad"
+    },
+    {
+      "file": "backlight-2.png",
+      "originalFilename": "контровой.png",
+      "sha256": "65e2fe44c6109dab85dc256a099ab48094206de8d08262d711a53818aa6d0dc5"
+    },
+    {
+      "file": "backlight-close.png",
+      "originalFilename": "крупныйПЛАНконтровой.png",
+      "sha256": "7522f9853725ab69b68708f1a11abf53ca48e920734688af0fe6a914d5f831b5"
+    },
+    {
+      "file": "two-softboxes.jpg",
+      "originalFilename": "посяной2софт.jpg",
+      "sha256": "800813bda091398f80e5da55d8ca2648362b231314ebec9c66f5232d34391ab8"
+    },
+    {
+      "file": "window.png",
+      "originalFilename": "ОКНО.png",
+      "sha256": "8290e0bfa2d8c6703f8bbedfa4d8fbba50205a5830afd4112ec709075e0419ef"
+    },
+    {
+      "file": "references.png",
+      "originalFilename": "референсыфото.png",
+      "sha256": "23dcf43fa5c1ecd8a31c2726e7040a178fc22d1227968bd680a2d4e4d0178d48"
+    },
+    {
+      "file": "selfie.jpg",
+      "originalFilename": "селфи.jpg",
+      "sha256": "f4ed3602a445bb1d20f1a39bb40c739758aef8e20a0de7851deffc63cef3c03e"
+    },
+    {
+      "file": "candid.jpg",
+      "originalFilename": "простоСМЕШНАЯфотка.jpg",
+      "sha256": "3fc057f8362651c2b84be3d8be1c3793a071dec7ac753f1515331463fde24939"
+    }
+  ]
+}

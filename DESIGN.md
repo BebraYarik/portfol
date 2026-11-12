@@ -68,7 +68,7 @@ components:
 
 The approved first mockup establishes a warm editorial setting for a Russian-language coursework exhibition. Large italic condensed type, open cream space, aligned photography and a purple/cyan ribbon create the visual character. Interface controls remain compact and captions stay close to the work.
 
-This document records the implemented system in `src/style.css`; the gallery composition is described in `.impeccable/surfaces/gallery.md`. Current image crops are provisional extracts from the approved mockup, not source photographs. Original files remain outstanding.
+This document records the implemented system in `src/style.css`; the gallery composition is described in `.impeccable/surfaces/gallery.md`. The 10 new photographs supplied in фото.zip are original files, preserved unchanged. Only the first four works still use provisional mockup crops; their originals remain outstanding.
 
 **Key Characteristics:**
 

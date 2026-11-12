@@ -2,7 +2,7 @@
 
 **final result: blocked**
 
-The implementation works and the finish review's one material implementation finding was resolved. Final photographic fidelity is blocked by unavailable original image files. The current site deliberately uses temporary crops of the selected generated mockup, not the original artworks. The user has been informed. Do not publish it as a finished photographic portfolio before replacing these.
+The implementation works. All 10 new image files supplied in `фото.zip` are now installed unchanged and verified. The remaining asset limitation applies **only to the first four works** (grapes, pop-art helmets and two double exposures), which still use provisional mockup crops because those originals were not included. The historical sections below record earlier checks; the latest archive section supersedes their missing-portrait status. Do not describe the first four previews as originals.
 
 ## Evidence
 
@@ -56,3 +56,16 @@ The user explicitly superseded the staggered gallery composition: remove pause c
 - JavaScript errors: none. Build passed.
 
 Final result remains **blocked** solely for original-asset delivery and final photographic verification. Layout changes can be reviewed and pushed independently.
+
+## Original archive integration — latest validation
+
+- Copied all 10 files from `фото.zip` into `src/photos/`, renaming only. SHA-256 equality with each source was verified. `src/photos/sources.json` preserves the filename mapping and hashes.
+- Latest archive filenames determine light setup: `контровой (2).png`, `контровой.png` and `крупныйПЛАНконтровой.png` form the three-frame backlight series; `посяной2софт.jpg` is the separate two-softbox portrait. The processed profile is `РЕТУШЬ.png`; `РЕТУШЬ (2).png` is the unretouched source.
+- Added the extra board portrait as work 11, «Свободный портрет». All 11 works render; 14 frames including the existing four provisional previews. No source photo was cropped, resized or regenerated.
+- Descriptions use simple user-provided details: a white wall, one lamp for the backlight series, two softboxes, window light and reference repetition. No remembered prompt, camera settings or unsupported software is invented.
+- Real-source browser checks passed: opening all 11 works, source load for each new work, retouch switches to the distinct processed file, backlight has all three original frames and the close-up selector opens the correct source.
+- Mobile 390px and 320px: no horizontal overflow; visible work order matches DOM order. Reset leftover work-specific CSS order to keep new additions in sequence.
+- Screenshots: `.impeccable/review/originals-desktop.png`, `originals-mobile.png`, `originals-retouch.png`, `originals-references.png`. Original source images were directly inspected; the source comparison board was additionally checked in the browser viewer.
+- JavaScript/network errors: none. Production build passed.
+
+New archive work is ready. Global photographic QA stays **blocked only for the four earlier original files**, not the portraits, references or selfie now supplied.

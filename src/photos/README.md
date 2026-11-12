@@ -10,12 +10,13 @@ Place original images here; Vite bundles them. Accepted extensions: jpg, jpeg, p
 | fox | Fox / forest double exposure |
 | retouch-before | Profile before AI retouch |
 | retouch-after | Profile after AI retouch |
-| backlight-1 | Short haircut, black T-shirt, chest portrait |
-| backlight-2 | Long hair, black sweatshirt, waist portrait |
-| backlight-close | Close-up, to be supplied later |
+| backlight-1 | `контровой (2).png`: long hair, black sweatshirt |
+| backlight-2 | `контровой.png`: short haircut, black T-shirt, waist portrait |
+| backlight-close | `крупныйПЛАНконтровой.png`: close-up as labeled by the user |
 | two-softboxes | Short haircut, black T-shirt, waist portrait |
 | window | Long hair, black sweatshirt, seated by the window |
 | references | Supplied reference/result comparison board |
 | selfie | Glasses, headphones and towel |
+| candid | Informal portrait in front of a board with drawings |
 
-New works appear only once files exist. Missing frames within a series are skipped. Existing four works retain provisional mockup crops until originals arrive. Do not generate substitutes for portraits.
+All 10 images from the user's archive are installed, including the backlight close-up. Their original filename/normalized filename/checksum mapping is in `sources.json`; images retain their original bytes. Latest archive filenames supersede earlier tentative lighting assignments. Existing first four works retain provisional mockup crops until originals arrive. Do not generate substitutes for portraits.
