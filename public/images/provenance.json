@@ -1,0 +1,9 @@
+{
+  "approved-reference.png": {
+    "kind": "generated-design-reference",
+    "source": "/workspace/generated_images/exec-7cf2a2ce-9d40-4318-a719-cd162f7616f9.png",
+    "selection": "User selected the first displayed mockup.",
+    "usage": "Temporary CSS crops for composition preview, not original photographs.",
+    "replacement": "Original files must be provided and assigned in src/works.js before final presentation."
+  }
+}

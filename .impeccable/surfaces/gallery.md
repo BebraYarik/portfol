@@ -1,0 +1,2 @@
+# Gallery
+Mode: Experience. Artifacts lead; minimal interface. Preserve the first selected comp: cream surface, italic condensed Cyrillic display, purple/cyan wave mesh, asymmetric two-column gallery, staggered images, concise captions and arrows. Mobile becomes a sequential single column. Keyboard-accessible modal photo viewer with previous/next. Respect reduced motion and offer a pause control. Do not expose absent coursework as invented work.
